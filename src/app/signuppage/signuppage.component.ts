@@ -20,7 +20,7 @@ export class SignuppageComponent {
   ) { }
   ngOnInit(): void {
     this.LoginForm = this.formBuilder.group({
-      email: new FormControl('', Validators.required),
+      email: ['', [Validators.required, Validators.email]],
       username: new FormControl('', Validators.required),
       pswd: new FormControl('', Validators.required),
       conpswd: new FormControl('', Validators.required),
@@ -34,9 +34,11 @@ export class SignuppageComponent {
         this.LoginForm.reset();
         this.router.navigate(['/home']);
     } else {
-      this.successMessage = 'Please fill all required fields!';
+     alert( 'Please fill all required fields!');
     }
   }
+  get f() { return this.LoginForm.controls; }
+
   confirmPasswordMessage() {
     this.password = (this.LoginForm.controls['pswd'].value == null ? "" : this.LoginForm.controls['pswd'].value);
     this.Reenterpassword = (this.LoginForm.controls['conpswd'].value == null ? "" : this.LoginForm.controls['conpswd'].value);
