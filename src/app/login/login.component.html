@@ -1,0 +1,88 @@
+<div class="pa-container">
+    <!-- Left Side: Image Section -->
+    <div class="">
+		<div class="d-flex no-gutters">
+            <div class="col-lg-7 col-md-6 d-none d-md-block">
+              <div class="image-section ">
+                 <img src="assets/images/book.jpg">
+               </div>
+            </div>
+            <div class="pa-container"></div>
+          <div class="col-lg-5 col-md-6">
+            <div class="pa-login__form-wrap">
+                <div class="pa-login__form-container">
+                   <h2 >Welcome to ReadFlow</h2>
+                    <div class="pa-login__form-title">
+                        Sign In
+                    </div>
+                    <form [formGroup]="LoginForm" (ngSubmit)="onFormSubmit()">
+                        <div class="pa-login__form-fields">
+                            <div class="pa-login__form-field mt-2">
+                                <div class="field-input">
+                                    <input class="input-block form-control" type="text" placeholder="User Name"
+                                        formControlName="username" kendoTextBox
+                                      />
+                                    <!-- <label class="input-label" for="">User Name</label> -->
+                                </div>
+                            </div>
+                            <div class="pa-login__form-field mt-2">
+
+                                <div class="field-input">
+                                    <input kendoTextBox class="input-block form-control" type="password"
+                                        placeholder="Password" formControlName="pswd" 
+                                        >
+                                       
+                                 
+                                    <!-- <label class="input-label" for="">Password</label> -->
+                                </div>
+                            </div>
+
+                            <div class="pa-login__form-field mt-2">
+                                <div class="d-flex justify-content-between">
+                                    <div class="form-check form-check-inline float-left">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox">
+                                        <span class="from-ckeck-input-box"></span>
+                                        <label class="form-check-label" for="inlineCheckbox">Remember</label>
+                                    </div>
+                                    <div class="float-right">
+                                        <a (click)="onForgotPassword()" class="pa-login__form-link"
+                                             style="color: #3ca6d6 !important;">Forgot
+                                            Password?</a>
+
+                                    </div>
+                                </div>
+
+                                <div class="clearfix"></div>
+
+
+                             
+                                <div class="pa-login__form-button mt-2" style="text-align: center;">
+                                    <span>
+                                        <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                                    </span>
+                                    <span>
+                                        <button class="btn btn-primary btn-lg ms-2" (click)="onclick()">Sign Up</button>
+                                    </span>
+                                    <span>
+                                        <button class="btn btn-primary btn-lg ms-2" (click)="oncancel()">Cancel</button>
+                                    </span>
+                                   
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+           
+        </div>
+    </div>
+        
+  
+    <!-- Right Side: Login Section -->
+   
+    
+</div>
+  
